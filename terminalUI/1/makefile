@@ -1,10 +1,10 @@
 CC=g++
-CFLAGS=
+CFLAGS= -g 
 DEPS = 
 OBJ = fancyCounter.o 
 
 %.o: %.cpp $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-SandBox: $(OBJ)
+fancyCounter: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS)
